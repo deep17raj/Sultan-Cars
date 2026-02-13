@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Car Buyers Melbourne | We Buy All Types of Vehicles</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9b233",
+                        "navy-deep": "#0a1628",
+                        "navy-elevated": "#0f1e33",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0a1628",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a1628;
+            color: #ffffff;
+        }
+
+        .glass-card {
+            background: rgba(15, 30, 51, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .gradient-border {
+            border: 1px solid transparent;
+            background: linear-gradient(#0f1e33, #0f1e33) padding-box,
+                linear-gradient(to bottom right, rgba(249, 178, 51, 0.2), rgba(255, 255, 255, 0.05)) border-box;
+        }
+
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        @keyframes float-slow {
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            25% {
+                transform: translate(10px, -15px) rotate(90deg);
+            }
+
+            50% {
+                transform: translate(-5px, -25px) rotate(180deg);
+            }
+
+            75% {
+                transform: translate(-15px, -10px) rotate(270deg);
+            }
+        }
+
+        @keyframes float-diagonal {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(20px, -30px) scale(1.1);
+            }
+        }
+
+        @keyframes spin-slow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes bounce-gentle {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                opacity: 0.2;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.3;
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-pulse-glow {
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+
+        .shimmer {
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    rgba(249, 178, 51, 0.03) 50%,
+                    transparent 100%);
+            background-size: 1000px 100%;
+            animation: shimmer 3s infinite;
+        }
+
+        .grid-pattern {
+            background-image:
+                linear-gradient(rgba(249, 178, 51, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(249, 178, 51, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .glow-orb {
+            filter: blur(80px);
+            opacity: 0.15;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased selection:bg-primary/30 scroll-smooth">
+    <!-- Top Navigation -->
+    <nav class="sticky top-0 z-50 w-full border-b border-white/5 bg-navy-deep/95 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="h-16 sm:h-20 flex items-center justify-between">
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <div
+                        class="size-8 sm:size-9 bg-primary flex items-center justify-center rounded-lg shadow-lg shadow-primary/20">
+                        <span class="text-navy-deep font-bold text-xl sm:text-2xl">$</span>
+                    </div>
+                    <span class="text-lg sm:text-xl font-bold tracking-tight text-white">CAR BUYERS <span
+                            class="text-primary">MELBOURNE</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-6 lg:gap-10">
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                        href="#services">Services</a>
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="#why-us">Why
+                        Us</a>
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="#about">About
+                        Us</a>
+                    <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                        href="#contact">Contact Us</a>
+                </div>
+
+                <div class="flex items-center gap-2 sm:gap-4">
+                    <a href="tel:0415050001" id="cta-btn-nav"
+                        class="px-4 sm:px-6 py-2 sm:py-2.5 bg-primary hover:bg-primary/90 text-navy-deep font-bold text-xs sm:text-sm rounded-lg transition-all shadow-lg shadow-primary/10">
+                        Get a Quote
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden border-t border-white/5">
+                <div class="py-4 space-y-3">
+                    <a class="block text-sm font-medium text-slate-400 hover:text-white transition-colors py-2"
+                        href="#services">Services</a>
+                    <a class="block text-sm font-medium text-slate-400 hover:text-white transition-colors py-2"
+                        href="#why-us">Why Us</a>
+                    <a class="block text-sm font-medium text-slate-400 hover:text-white transition-colors py-2"
+                        href="#about">About Us</a>
+                    <a class="block text-sm font-medium text-slate-400 hover:text-white transition-colors py-2"
+                        href="#contact">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative">
+        <!-- Hero Section -->
+        <section class="relative pt-12 sm:pt-20 pb-20 sm:pb-32 overflow-hidden px-4 sm:px-6">
+            <!-- Animated Background Effects -->
+            <div class="absolute inset-0 grid-pattern opacity-10"></div>
+
+            <!-- Glowing Orbs -->
+            <div
+                class="absolute top-[-10%] right-[-20%] sm:right-[-10%] w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-primary rounded-full glow-orb animate-pulse-glow pointer-events-none">
+            </div>
+            <div class="absolute top-[20%] right-[10%] w-[200px] sm:w-[300px] h-[200px] sm:h-[300px] bg-blue-500 rounded-full glow-orb animate-float pointer-events-none"
+                style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-[-10%] left-[-10%] sm:left-[-5%] w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-purple-500 rounded-full glow-orb animate-pulse-glow pointer-events-none"
+                style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-[30%] left-[5%] w-[150px] sm:w-[250px] h-[150px] sm:h-[250px] bg-green-500 rounded-full glow-orb animate-float pointer-events-none"
+                style="animation-delay: 0.5s;"></div>
+
+            <!-- Shimmer Effect -->
+            <div class="absolute inset-0 shimmer pointer-events-none"></div>
+
+            <!-- Gradient Overlay -->
+            <div
+                class="absolute inset-0 bg-gradient-to-b from-transparent via-navy-deep/20 to-navy-deep pointer-events-none">
+            </div>
+
+            <!-- Animated Geometric Shapes Across Hero Section -->
+            <!-- Top Left Area -->
+            <div class="absolute top-[15%] left-[5%] w-20 h-20 border-2 border-primary/15 rounded-full pointer-events-none"
+                style="animation: float-slow 10s ease-in-out infinite;"></div>
+            <div class="absolute top-[25%] left-[12%] w-16 h-16 border border-blue-400/15 rotate-45 pointer-events-none"
+                style="animation: spin-slow 25s linear infinite;"></div>
+            <div class="absolute top-[10%] left-[20%] text-primary/15 text-5xl pointer-events-none"
+                style="animation: float-diagonal 8s ease-in-out infinite;">+</div>
+
+            <!-- Top Right Area -->
+            <div class="absolute top-[20%] right-[8%] w-14 h-14 border-2 border-purple-400/15 rounded-full pointer-events-none"
+                style="animation: bounce-gentle 5s ease-in-out infinite; animation-delay: 1s;"></div>
+            <div class="absolute top-[35%] right-[15%] w-12 h-12 border border-green-400/15 pointer-events-none"
+                style="animation: float-slow 12s ease-in-out infinite reverse;"></div>
+            <div class="absolute top-[12%] right-[25%] w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-b-[30px] border-b-primary/10 pointer-events-none"
+                style="animation: float-diagonal 9s ease-in-out infinite; animation-delay: 2s;"></div>
+
+            <!-- Middle Left Area -->
+            <div class="absolute top-[45%] left-[3%] w-18 h-18 border border-blue-400/15 rotate-12 pointer-events-none"
+                style="animation: spin-slow 20s linear infinite;"></div>
+            <div class="absolute top-[55%] left-[8%] w-3 h-3 bg-primary/25 rounded-full pointer-events-none"
+                style="animation: bounce-gentle 4s ease-in-out infinite;"></div>
+            <div class="absolute top-[50%] left-[15%] w-24 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent pointer-events-none"
+                style="animation: float-slow 7s ease-in-out infinite;"></div>
+
+            <!-- Middle Right Area -->
+            <div class="absolute top-[48%] right-[5%] w-16 h-16 border-2 border-primary/15 rounded-full pointer-events-none"
+                style="animation: float-diagonal 11s ease-in-out infinite; animation-delay: 1.5s;"></div>
+            <div class="absolute top-[60%] right-[12%] text-blue-400/15 text-4xl pointer-events-none"
+                style="animation: spin-slow 18s linear infinite;">+</div>
+            <div class="absolute top-[52%] right-[20%] w-3 h-3 bg-blue-400/25 rounded-full pointer-events-none"
+                style="animation: bounce-gentle 3.5s ease-in-out infinite; animation-delay: 0.8s;"></div>
+
+            <!-- Bottom Left Area -->
+            <div class="absolute bottom-[15%] left-[10%] w-14 h-14 border border-purple-400/15 rotate-45 pointer-events-none"
+                style="animation: float-slow 9s ease-in-out infinite; animation-delay: 1s;"></div>
+            <div class="absolute bottom-[25%] left-[5%] w-0 h-0 border-l-[18px] border-l-transparent border-r-[18px] border-r-transparent border-b-[28px] border-b-blue-400/10 pointer-events-none"
+                style="animation: bounce-gentle 6s ease-in-out infinite; animation-delay: 2s;"></div>
+            <div class="absolute bottom-[20%] left-[18%] w-20 h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent pointer-events-none"
+                style="animation: float-diagonal 8s ease-in-out infinite; animation-delay: 1s;"></div>
+
+            <!-- Bottom Right Area -->
+            <div class="absolute bottom-[18%] right-[8%] w-12 h-12 border-2 border-green-400/15 rounded-full pointer-events-none"
+                style="animation: float-slow 10s ease-in-out infinite reverse; animation-delay: 0.5s;"></div>
+            <div class="absolute bottom-[28%] right-[15%] w-16 h-16 border border-primary/15 pointer-events-none"
+                style="animation: spin-slow 22s linear infinite;"></div>
+            <div class="absolute bottom-[12%] right-[25%] text-purple-400/15 text-5xl pointer-events-none"
+                style="animation: float-diagonal 7s ease-in-out infinite; animation-delay: 1.5s;">+</div>
+
+            <!-- Center Scattered Elements -->
+            <div class="absolute top-[40%] left-[40%] w-3 h-3 bg-purple-400/25 rounded-full pointer-events-none hidden lg:block"
+                style="animation: bounce-gentle 4.5s ease-in-out infinite; animation-delay: 1s;"></div>
+            <div class="absolute top-[30%] left-[50%] w-10 h-10 border border-primary/10 rotate-12 pointer-events-none hidden lg:block"
+                style="animation: float-slow 11s ease-in-out infinite;"></div>
+            <div class="absolute top-[65%] left-[45%] w-3 h-3 bg-green-400/25 rounded-full pointer-events-none hidden lg:block"
+                style="animation: bounce-gentle 3.8s ease-in-out infinite; animation-delay: 0.5s;"></div>
+            <div class="absolute top-[70%] right-[40%] w-14 h-px bg-gradient-to-r from-transparent via-purple-400/20 to-transparent pointer-events-none hidden lg:block"
+                style="animation: float-diagonal 9s ease-in-out infinite;"></div>
+
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center relative z-10">
+                <!-- Left: Content -->
+                <div class="space-y-6 sm:space-y-8 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
+                        <span class="material-symbols-outlined text-sm">verified</span>
+                        Melbourne's Most Trusted
+                    </div>
+                    <h1
+                        class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] text-white tracking-tight drop-shadow-2xl">
+                        We Buy All Types of <span class="text-white/60">Vehicles</span>
+                    </h1>
+                    <p
+                        class="text-base sm:text-lg text-slate-400 max-w-lg leading-relaxed mx-auto lg:mx-0 drop-shadow-lg">
+                        From everyday cars to commercial vans and rugged 4WDs - we pay top cash for all vehicles
+                        regardless of condition.
+                    </p>
+                    <div class="flex flex-col gap-3 sm:gap-4 text-sm font-medium text-slate-300">
+                        <div
+                            class="flex items-center gap-3 justify-center lg:justify-start backdrop-blur-sm bg-white/5 rounded-lg px-4 py-2 w-fit mx-auto lg:mx-0">
+                            <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            <span>100% Free towing Victoria-wide</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-3 justify-center lg:justify-start backdrop-blur-sm bg-white/5 rounded-lg px-4 py-2 w-fit mx-auto lg:mx-0">
+                            <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            <span>Instant cash payments on the spot</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-3 justify-center lg:justify-start backdrop-blur-sm bg-white/5 rounded-lg px-4 py-2 w-fit mx-auto lg:mx-0">
+                            <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                            <span>Licensed, bonded, and fully insured</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Valuation Tool (Glassmorphism) -->
+                <div class="relative">
+                    <!-- Animated Floating Elements Behind Form -->
+                    <!-- Circle Elements -->
+                    <div class="absolute top-10 -right-10 w-16 h-16 border-2 border-primary/20 rounded-full -z-10"
+                        style="animation: float-slow 8s ease-in-out infinite;"></div>
+                    <div class="absolute top-32 -left-8 w-12 h-12 border-2 border-blue-400/20 rounded-full -z-10"
+                        style="animation: float-diagonal 6s ease-in-out infinite; animation-delay: 1s;"></div>
+                    <div class="absolute bottom-20 -right-6 w-10 h-10 border-2 border-purple-400/20 rounded-full -z-10"
+                        style="animation: bounce-gentle 4s ease-in-out infinite; animation-delay: 0.5s;"></div>
+
+                    <!-- Square Elements -->
+                    <div class="absolute top-1/4 -left-12 w-14 h-14 border border-primary/15 rotate-12 -z-10"
+                        style="animation: spin-slow 20s linear infinite;"></div>
+                    <div class="absolute top-2/3 -right-8 w-10 h-10 border border-green-400/15 rotate-45 -z-10"
+                        style="animation: float-slow 10s ease-in-out infinite reverse;"></div>
+
+                    <!-- Triangle Elements (using border trick) -->
+                    <div class="absolute top-16 left-1/4 w-0 h-0 border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent border-b-[25px] border-b-primary/10 -z-10"
+                        style="animation: float-diagonal 7s ease-in-out infinite; animation-delay: 2s;"></div>
+                    <div class="absolute bottom-32 right-1/4 w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[20px] border-b-blue-400/10 -z-10"
+                        style="animation: bounce-gentle 5s ease-in-out infinite; animation-delay: 1.5s;"></div>
+
+                    <!-- Plus Signs -->
+                    <div class="absolute top-1/2 -right-10 text-primary/20 text-4xl -z-10"
+                        style="animation: spin-slow 15s linear infinite;">+</div>
+                    <div class="absolute bottom-1/3 -left-10 text-blue-400/20 text-3xl -z-10"
+                        style="animation: float-slow 9s ease-in-out infinite; animation-delay: 0.7s;">+</div>
+
+                    <!-- Dots Pattern -->
+                    <div class="absolute top-8 left-1/3 w-2 h-2 bg-primary/30 rounded-full -z-10"
+                        style="animation: bounce-gentle 3s ease-in-out infinite;"></div>
+                    <div class="absolute top-1/3 right-12 w-2 h-2 bg-blue-400/30 rounded-full -z-10"
+                        style="animation: bounce-gentle 4s ease-in-out infinite; animation-delay: 1s;"></div>
+                    <div class="absolute bottom-1/4 left-8 w-2 h-2 bg-purple-400/30 rounded-full -z-10"
+                        style="animation: bounce-gentle 3.5s ease-in-out infinite; animation-delay: 0.5s;"></div>
+
+                    <!-- Line Elements -->
+                    <div class="absolute top-12 right-1/4 w-20 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent -z-10"
+                        style="animation: float-diagonal 8s ease-in-out infinite;"></div>
+                    <div class="absolute bottom-16 left-1/4 w-16 h-px bg-gradient-to-r from-transparent via-blue-400/20 to-transparent -z-10"
+                        style="animation: float-slow 7s ease-in-out infinite; animation-delay: 1.5s;"></div>
+
+                    <!-- Glowing backdrop -->
+                    <div
+                        class="absolute -inset-4 bg-gradient-to-r from-primary/10 to-blue-500/10 rounded-3xl blur-3xl opacity-30 animate-pulse-glow">
+                    </div>
+
+                    <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-2xl relative z-10 border border-white/20">
+                        <div class="flex items-center justify-between mb-6 sm:mb-8">
+                            <h3 class="text-lg sm:text-xl font-bold text-white">Get Your Quote</h3>
+                            <div class="flex gap-1">
+                                <div class="h-1 w-6 sm:w-8 bg-primary rounded-full shadow-lg shadow-primary/50"></div>
+                                <div class="h-1 w-3 sm:w-4 bg-white/10 rounded-full"></div>
+                                <div class="h-1 w-3 sm:w-4 bg-white/10 rounded-full"></div>
+                            </div>
+                        </div>
+                        <form id="valuation-form" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="space-y-1">
+                                    <input
+                                        class="w-full bg-navy-deep/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:ring-2 focus:ring-primary/50 focus:border-primary/50 outline-none text-sm sm:text-base transition-all"
+                                        placeholder="Your Name *" type="text" required id="name" />
+                                </div>
+                                <div class="space-y-1">
+                                    <input
+                                        class="w-full bg-navy-deep/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:ring-2 focus:ring-primary/50 focus:border-primary/50 outline-none text-sm sm:text-base transition-all"
+                                        placeholder="Phone Number *" type="tel" required id="phone" />
+                                </div>
+                            </div>
+
+                            <div class="space-y-1">
+                                <input
+                                    class="w-full bg-navy-deep/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:ring-2 focus:ring-primary/50 focus:border-primary/50 outline-none text-sm sm:text-base transition-all"
+                                    placeholder="Email Address" type="email" id="email" />
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-2 sm:gap-3">
+                                <input
+                                    class="w-full bg-navy-deep/50 border border-white/10 rounded-lg px-3 sm:px-4 py-3 text-white placeholder:text-slate-500 focus:ring-2 focus:ring-primary/50 focus:border-primary/50 outline-none text-xs sm:text-sm transition-all"
+                                    placeholder="Make *" type="text" required id="make" />
+                                <input
+                                    class="w-full bg-navy-deep/50 border border-white/10 rounded-lg px-3 sm:px-4 py-3 text-white placeholder:text-slate-500 focus:ring-2 focus:ring-primary/50 focus:border-primary/50 outline-none text-xs sm:text-sm transition-all"
+                                    placeholder="Model *" type="text" required id="model" />
+                                <input
+                                    class="w-full bg-navy-deep/50 border border-white/10 rounded-lg px-3 sm:px-4 py-3 text-white placeholder:text-slate-500 focus:ring-2 focus:ring-primary/50 focus:border-primary/50 outline-none text-xs sm:text-sm transition-all"
+                                    placeholder="Year" type="text" id="year" />
+                            </div>
+
+                            <div class="space-y-1">
+                                <select
+                                    class="w-full bg-navy-deep/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:ring-2 focus:ring-primary/50 focus:border-primary/50 outline-none appearance-none cursor-pointer text-sm sm:text-base transition-all"
+                                    id="condition">
+                                    <option value="" disabled selected>Running Condition</option>
+                                    <option value="excellent">Excellent - No issues</option>
+                                    <option value="good">Good - Minor wear</option>
+                                    <option value="fair">Fair - Needs work</option>
+                                    <option value="poor">Not Running</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-1">
+                                <textarea rows="3"
+                                    class="w-full bg-navy-deep/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-slate-500 focus:ring-2 focus:ring-primary/50 focus:border-primary/50 outline-none resize-none text-sm sm:text-base transition-all"
+                                    placeholder="Additional details (optional)" id="details"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full py-3 sm:py-4 bg-primary hover:bg-primary/90 text-navy-deep font-black text-base sm:text-lg rounded-lg transition-all shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40 flex items-center justify-center gap-2 uppercase tracking-tight hover:scale-[1.02]">
+                                <span class="material-symbols-outlined transform -rotate-45">send</span>
+                                Get my free quote
+                            </button>
+
+                            <p class="text-center text-xs text-slate-400">
+                                Or call us directly: <a href="tel:0415050001"
+                                    class="text-primary font-bold hover:underline">0415 050 001</a>
+                            </p>
+                        </form>
+                    </div>
+
+                    <!-- Decorative elements -->
+                    <div
+                        class="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-2xl -z-10 translate-x-2 translate-y-2 hidden sm:block">
+                    </div>
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+                    <div class="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 sm:py-24 bg-navy-elevated/30 px-4 sm:px-6 relative overflow-hidden">
+            <!-- Subtle Background Elements for Services -->
+            <div class="absolute top-[10%] left-[5%] w-16 h-16 border border-primary/10 rounded-full pointer-events-none"
+                style="animation: float-slow 12s ease-in-out infinite;"></div>
+            <div class="absolute top-[25%] right-[8%] w-12 h-12 border border-blue-400/10 rotate-45 pointer-events-none"
+                style="animation: spin-slow 30s linear infinite;"></div>
+            <div class="absolute bottom-[20%] left-[10%] text-primary/8 text-4xl pointer-events-none"
+                style="animation: float-diagonal 10s ease-in-out infinite;">+</div>
+            <div class="absolute bottom-[15%] right-[12%] w-14 h-14 border border-purple-400/10 pointer-events-none"
+                style="animation: float-slow 15s ease-in-out infinite reverse;"></div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-12 sm:mb-16">
+                    <p class="text-primary text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-3">Our Services
+                    </p>
+                    <h2 class="text-3xl sm:text-5xl font-black text-white uppercase">We Buy All Types of Vehicles</h2>
+                    <p class="text-slate-400 mt-4 text-base sm:text-lg max-w-3xl mx-auto">From everyday cars to
+                        commercial vans and rugged 4WDs - we pay top cash for all vehicles regardless of condition.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Cash for Cars -->
+                    <div class="gradient-border rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all">
+                        <div
+                            class="h-48 bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1727893512947-8bdc773ceb02?crop=entropy&cs=srgb&fm=jpg&q=85')] bg-cover bg-center opacity-30">
+                            </div>
+                            <span class="material-symbols-outlined text-primary text-6xl relative z-10">key</span>
+                        </div>
+                        <div class="p-6 space-y-3 bg-navy-elevated">
+                            <h3 class="text-xl font-black text-white uppercase">Cash for Cars</h3>
+                            <p class="text-slate-400 text-sm">Fair market value paid instantly for your vehicle.</p>
+                        </div>
+                    </div>
+
+                    <!-- Car Removal -->
+                    <div class="gradient-border rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all">
+                        <div
+                            class="h-48 bg-gradient-to-br from-blue-500/20 to-blue-500/5 flex items-center justify-center relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1729628377442-7b3b37a99273?crop=entropy&cs=srgb&fm=jpg&q=85')] bg-cover bg-center opacity-30">
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-blue-400 text-6xl relative z-10">local_shipping</span>
+                        </div>
+                        <div class="p-6 space-y-3 bg-navy-elevated">
+                            <h3 class="text-xl font-black text-white uppercase">Car Removal</h3>
+                            <p class="text-slate-400 text-sm">Free, fast, and professional towing from any location.</p>
+                        </div>
+                    </div>
+
+                    <!-- Scrap Car Buyers -->
+                    <div class="gradient-border rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all">
+                        <div
+                            class="h-48 bg-gradient-to-br from-green-500/20 to-green-500/5 flex items-center justify-center relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1767340078321-7434a30fe96d?crop=entropy&cs=srgb&fm=jpg&q=85')] bg-cover bg-center opacity-30">
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-green-400 text-6xl relative z-10">recycling</span>
+                        </div>
+                        <div class="p-6 space-y-3 bg-navy-elevated">
+                            <h3 class="text-xl font-black text-white uppercase">Scrap Car Buyers</h3>
+                            <p class="text-slate-400 text-sm">We buy end-of-life vehicles for environmentally friendly
+                                recycling.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cash for Vans -->
+                    <div class="gradient-border rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all">
+                        <div
+                            class="h-48 bg-gradient-to-br from-purple-500/20 to-purple-500/5 flex items-center justify-center relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?w=800')] bg-cover bg-center opacity-30">
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-purple-400 text-6xl relative z-10">rv_hookup</span>
+                        </div>
+                        <div class="p-6 space-y-3 bg-navy-elevated">
+                            <h3 class="text-xl font-black text-white uppercase">Cash for Vans</h3>
+                            <p class="text-slate-400 text-sm">Commercial or private vans, running or dead.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cash for Utes -->
+                    <div class="gradient-border rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all">
+                        <div
+                            class="h-48 bg-gradient-to-br from-orange-500/20 to-orange-500/5 flex items-center justify-center relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800')] bg-cover bg-center opacity-30">
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-orange-400 text-6xl relative z-10">agriculture</span>
+                        </div>
+                        <div class="p-6 space-y-3 bg-navy-elevated">
+                            <h3 class="text-xl font-black text-white uppercase">Cash for Utes</h3>
+                            <p class="text-slate-400 text-sm">Top value for Hilux, Ranger, Triton and all workhorses.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Cash for 4WD -->
+                    <div class="gradient-border rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all">
+                        <div
+                            class="h-48 bg-gradient-to-br from-red-500/20 to-red-500/5 flex items-center justify-center relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800')] bg-cover bg-center opacity-30">
+                            </div>
+                            <span class="material-symbols-outlined text-red-400 text-6xl relative z-10">terrain</span>
+                        </div>
+                        <div class="p-6 space-y-3 bg-navy-elevated">
+                            <h3 class="text-xl font-black text-white uppercase">Cash for 4WD</h3>
+                            <p class="text-slate-400 text-sm">We love off-roaders. Get a premium quote today.</p>
+                        </div>
+                    </div>
+
+                    <!-- Car Wreckers -->
+                    <div
+                        class="gradient-border rounded-2xl overflow-hidden group hover:scale-[1.02] transition-all md:col-span-2 lg:col-span-1">
+                        <div
+                            class="h-48 bg-gradient-to-br from-yellow-500/20 to-yellow-500/5 flex items-center justify-center relative overflow-hidden">
+                            <div
+                                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1563720223185-11003d516935?w=800')] bg-cover bg-center opacity-30">
+                            </div>
+                            <span class="material-symbols-outlined text-yellow-400 text-6xl relative z-10">build</span>
+                        </div>
+                        <div class="p-6 space-y-3 bg-navy-elevated">
+                            <h3 class="text-xl font-black text-white uppercase">Car Wreckers</h3>
+                            <p class="text-slate-400 text-sm">Professional dismantling and parts recovery.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#contact"
+                        class="inline-flex items-center gap-3 px-8 py-4 bg-primary hover:bg-primary/90 text-navy-deep font-black text-lg rounded-xl transition-all shadow-xl shadow-primary/20">
+                        <span class="material-symbols-outlined">call</span>
+                        Call for Instant Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="py-20 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
+            <!-- Subtle Background Elements for Why Us -->
+            <div class="absolute top-[15%] right-[6%] w-14 h-14 border-2 border-primary/10 rounded-full pointer-events-none"
+                style="animation: bounce-gentle 6s ease-in-out infinite;"></div>
+            <div class="absolute top-[40%] left-[8%] w-10 h-10 border border-blue-400/10 rotate-12 pointer-events-none"
+                style="animation: float-slow 14s ease-in-out infinite;"></div>
+            <div class="absolute bottom-[25%] right-[10%] w-0 h-0 border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent border-b-[22px] border-b-primary/8 pointer-events-none"
+                style="animation: float-diagonal 11s ease-in-out infinite; animation-delay: 1s;"></div>
+            <div class="absolute top-[50%] right-[15%] w-2 h-2 bg-purple-400/20 rounded-full pointer-events-none hidden lg:block"
+                style="animation: bounce-gentle 4s ease-in-out infinite; animation-delay: 0.5s;"></div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-12 sm:mb-16">
+                    <p class="text-primary text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-3">Why Choose Us
+                    </p>
+                    <h2 class="text-3xl sm:text-5xl font-black text-white uppercase">Melbourne's Most Trusted <span
+                            class="text-primary">Car Buyers</span></h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <div class="space-y-8">
+                        <p class="text-slate-400 text-lg leading-relaxed">
+                            With years of experience in the automotive industry, we've built a reputation for fair
+                            prices, professional service, and hassle-free transactions. We make selling your car easy.
+                        </p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="gradient-border rounded-xl p-6">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-2xl">attach_money</span>
+                                    </div>
+                                </div>
+                                <h4 class="font-black text-white uppercase text-base mb-2">Instant Cash Payments</h4>
+                                <p class="text-slate-400 text-sm">Get paid on the spot. No waiting, no hassles.</p>
+                            </div>
+
+                            <div class="gradient-border rounded-xl p-6">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="size-12 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                                        <span
+                                            class="material-symbols-outlined text-blue-400 text-2xl">local_shipping</span>
+                                    </div>
+                                </div>
+                                <h4 class="font-black text-white uppercase text-base mb-2">Free Victoria-Wide Towing
+                                </h4>
+                                <p class="text-slate-400 text-sm">We come to you anywhere in Victoria.</p>
+                            </div>
+
+                            <div class="gradient-border rounded-xl p-6">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="size-12 rounded-lg bg-green-500/10 flex items-center justify-center">
+                                        <span
+                                            class="material-symbols-outlined text-green-400 text-2xl">description</span>
+                                    </div>
+                                </div>
+                                <h4 class="font-black text-white uppercase text-base mb-2">No Paperwork Hassle</h4>
+                                <p class="text-slate-400 text-sm">We handle all the documentation for you.</p>
+                            </div>
+
+                            <div class="gradient-border rounded-xl p-6">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="size-12 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                                        <span
+                                            class="material-symbols-outlined text-purple-400 text-2xl">verified_user</span>
+                                    </div>
+                                </div>
+                                <h4 class="font-black text-white uppercase text-base mb-2">Licensed & Insured</h4>
+                                <p class="text-slate-400 text-sm">Fully licensed and insured for your peace of mind.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="glass-card rounded-2xl p-8 text-center space-y-4 hover:scale-105 transition-all">
+                            <div class="text-4xl font-black text-primary">10K+</div>
+                            <div class="text-xs uppercase tracking-wide text-slate-400 font-bold">Cars Bought</div>
+                        </div>
+                        <div class="glass-card rounded-2xl p-8 text-center space-y-4 hover:scale-105 transition-all">
+                            <div class="text-4xl font-black text-primary">15+</div>
+                            <div class="text-xs uppercase tracking-wide text-slate-400 font-bold">Years Experience</div>
+                        </div>
+                        <div class="glass-card rounded-2xl p-8 text-center space-y-4 hover:scale-105 transition-all">
+                            <div class="text-4xl font-black text-primary">4.9</div>
+                            <div class="text-xs uppercase tracking-wide text-slate-400 font-bold">Star Rating</div>
+                        </div>
+                        <div class="glass-card rounded-2xl p-8 text-center space-y-4 hover:scale-105 transition-all">
+                            <div class="text-4xl font-black text-primary">24/7</div>
+                            <div class="text-xs uppercase tracking-wide text-slate-400 font-bold">Availability</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 sm:py-32 px-4 sm:px-6 bg-navy-elevated/30 relative overflow-hidden">
+            <!-- Subtle Background Elements for About -->
+            <div class="absolute top-[20%] left-[7%] w-12 h-12 border border-green-400/10 rounded-full pointer-events-none"
+                style="animation: float-diagonal 13s ease-in-out infinite;"></div>
+            <div class="absolute top-[60%] right-[9%] text-blue-400/8 text-5xl pointer-events-none"
+                style="animation: spin-slow 25s linear infinite;">+</div>
+            <div class="absolute bottom-[30%] left-[12%] w-16 h-px bg-gradient-to-r from-transparent via-primary/15 to-transparent pointer-events-none"
+                style="animation: float-slow 9s ease-in-out infinite;"></div>
+            <div class="absolute top-[35%] right-[18%] w-10 h-10 border border-primary/10 rotate-45 pointer-events-none hidden lg:block"
+                style="animation: float-slow 16s ease-in-out infinite reverse;"></div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="relative order-2 lg:order-1">
+                        <div class="glass-card rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&h=600&fit=crop"
+                                alt="BMW Car" class="w-full h-auto"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div
+                                class="hidden h-96 bg-gradient-to-br from-primary/20 to-primary/5 items-center justify-center">
+                                <span class="material-symbols-outlined text-primary text-8xl">directions_car</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-6 right-6 bg-primary text-navy-deep rounded-xl p-6 shadow-2xl">
+                            <div class="text-3xl font-black">$15K+</div>
+                            <div class="text-xs uppercase font-bold">Top Cash Offers</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 order-1 lg:order-2">
+                        <div>
+                            <p class="text-primary text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-3">About
+                                Us</p>
+                            <h2 class="text-3xl sm:text-5xl font-black text-white uppercase mb-6">Your Local Melbourne
+                                <span class="text-primary">Car Buying Experts</span></h2>
+                        </div>
+
+                        <p class="text-slate-400 leading-relaxed">
+                            Car Buyers Melbourne is your trusted partner for selling any vehicle quickly and easily.
+                            We've been serving the Melbourne community for over 15 years, providing fair cash offers and
+                            exceptional service.
+                        </p>
+
+                        <p class="text-slate-400 leading-relaxed">
+                            Whether you have a late-model sedan, an old ute that's seen better days, or a commercial van
+                            you no longer need, we'll make you a competitive cash offer and handle all the paperwork.
+                        </p>
+
+                        <div class="space-y-3 pt-4">
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined text-green-400 text-xl mt-0.5">check_circle</span>
+                                <p class="text-slate-300 text-sm">All makes, models, and conditions accepted</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined text-green-400 text-xl mt-0.5">check_circle</span>
+                                <p class="text-slate-300 text-sm">Environmentally responsible recycling practices</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined text-green-400 text-xl mt-0.5">check_circle</span>
+                                <p class="text-slate-300 text-sm">Transparent pricing with no hidden fees</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <span
+                                    class="material-symbols-outlined text-green-400 text-xl mt-0.5">check_circle</span>
+                                <p class="text-slate-300 text-sm">Licensed and fully insured operations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 sm:py-32 px-4 sm:px-6 relative overflow-hidden">
+            <!-- Subtle Background Elements for Contact -->
+            <div class="absolute top-[18%] right-[10%] w-14 h-14 border border-primary/10 pointer-events-none"
+                style="animation: spin-slow 28s linear infinite;"></div>
+            <div class="absolute top-[50%] left-[8%] w-12 h-12 border-2 border-blue-400/10 rounded-full pointer-events-none"
+                style="animation: bounce-gentle 7s ease-in-out infinite; animation-delay: 1s;"></div>
+            <div class="absolute bottom-[25%] right-[15%] w-2 h-2 bg-primary/25 rounded-full pointer-events-none"
+                style="animation: float-diagonal 5s ease-in-out infinite;"></div>
+            <div class="absolute top-[70%] left-[15%] w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[18px] border-b-purple-400/8 pointer-events-none hidden lg:block"
+                style="animation: float-slow 12s ease-in-out infinite; animation-delay: 0.8s;"></div>
+
+            <div class="max-w-5xl mx-auto relative z-10">
+                <div class="text-center mb-12 sm:mb-16">
+                    <p class="text-primary text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-3">Get In Touch
+                    </p>
+                    <h2 class="text-3xl sm:text-5xl font-black text-white uppercase mb-6">Ready to Sell Your Car?</h2>
+                    <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+                        Get an instant cash offer today. Call us, WhatsApp, or email for a free, no-obligation quote.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-4 justify-center mb-12">
+                    <a href="tel:0415050001"
+                        class="px-8 py-4 bg-primary hover:bg-primary/90 text-navy-deep font-black text-lg rounded-xl transition-all flex items-center gap-3 shadow-xl shadow-primary/20">
+                        <span class="material-symbols-outlined">call</span>
+                        0415 050 001
+                    </a>
+                    <a href="https://wa.me/61415050001"
+                        class="px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-black text-lg rounded-xl transition-all flex items-center gap-3 shadow-xl">
+                        <span class="material-symbols-outlined">chat</span>
+                        WhatsApp Us
+                    </a>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 sm:p-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary text-2xl">email</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 uppercase tracking-wider mb-1">Email</p>
+                                    <a href="/cdn-cgi/l/email-protection#afc6c1c9c0efccceddcddad6cadddcc2cac3cdc0daddc1ca81ccc0c281ceda"
+                                        class="text-slate-200 hover:text-primary transition-colors font-medium">
+                                        <span class="__cf_email__"
+                                            data-cfemail="61080f070e210200130314180413120c040d030e14130f044f020e0c4f0014">[email&#160;protected]</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary text-2xl">location_on</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 uppercase tracking-wider mb-1">Location</p>
+                                    <span class="text-slate-200 font-medium">Serving all of Melbourne, Victoria</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 uppercase tracking-wider mb-1">Hours</p>
+                                    <span class="text-slate-200 font-medium">24/7 Available</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-primary text-2xl">phone</span>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 uppercase tracking-wider mb-1">Phone</p>
+                                    <a href="tel:0415050001"
+                                        class="text-slate-200 hover:text-primary transition-colors font-medium">
+                                        0415 050 001
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="reviews" class="py-20 sm:py-32 px-4 sm:px-6 bg-navy-elevated/20 relative overflow-hidden">
+            <!-- Subtle Background Elements for Reviews -->
+            <div class="absolute top-[12%] left-[6%] w-16 h-16 border border-green-400/10 rounded-full pointer-events-none"
+                style="animation: float-diagonal 14s ease-in-out infinite;"></div>
+            <div class="absolute top-[55%] right-[7%] w-12 h-12 border border-primary/10 rotate-12 pointer-events-none"
+                style="animation: spin-slow 32s linear infinite;"></div>
+            <div class="absolute bottom-[20%] left-[12%] text-purple-400/8 text-4xl pointer-events-none"
+                style="animation: float-slow 11s ease-in-out infinite;">+</div>
+            <div class="absolute top-[40%] right-[20%] w-2 h-2 bg-blue-400/20 rounded-full pointer-events-none hidden lg:block"
+                style="animation: bounce-gentle 5s ease-in-out infinite; animation-delay: 1.2s;"></div>
+
+            <div
+                class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-start lg:items-center relative z-10">
+                <div class="lg:w-1/3 space-y-4 sm:space-y-6">
+                    <div class="flex items-center gap-1 text-primary">
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star_half</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white leading-tight">Trusted by over 10,000 car
+                        owners.</h2>
+                    <p class="text-slate-400 text-sm sm:text-base">4.9/5 Average rating across Google. We take your
+                        trust seriously.</p>
+                    <div class="pt-4">
+                        <div
+                            class="size-14 sm:size-16 rounded-2xl bg-white/5 border border-white/10 p-3 sm:p-4 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-2xl sm:text-3xl">verified</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    <!-- Quote 1 -->
+                    <div class="p-6 sm:p-8 bg-navy-elevated rounded-2xl border border-white/5 space-y-4 sm:space-y-6">
+                        <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl">format_quote</span>
+                        <p class="text-base sm:text-lg text-slate-200 leading-relaxed italic">"Sold my old Commodore in
+                            less than 2 hours. The payment was instant and the team was professional. Highly recommend!"
+                        </p>
+                        <div class="flex items-center gap-3 sm:gap-4">
+                            <div
+                                class="size-10 sm:size-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-500">
+                                <span class="material-symbols-outlined text-lg sm:text-xl">person</span>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold text-sm sm:text-base">James Wilson</h5>
+                                <p class="text-xs text-slate-500 uppercase tracking-widest">Holden Commodore • Melbourne
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Quote 2 -->
+                    <div class="p-6 sm:p-8 bg-navy-elevated rounded-2xl border border-white/5 space-y-4 sm:space-y-6">
+                        <span class="material-symbols-outlined text-primary text-3xl sm:text-4xl">format_quote</span>
+                        <p class="text-base sm:text-lg text-slate-200 leading-relaxed italic">"Best car buying
+                            experience I've had. Fair price, no haggling, and they handled everything. Will use again!"
+                        </p>
+                        <div class="flex items-center gap-3 sm:gap-4">
+                            <div
+                                class="size-10 sm:size-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-500">
+                                <span class="material-symbols-outlined text-lg sm:text-xl">person</span>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold text-sm sm:text-base">Sarah Thompson</h5>
+                                <p class="text-xs text-slate-500 uppercase tracking-widest">Toyota Hilux • Victoria</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-12 sm:py-20 px-4 sm:px-6 relative overflow-hidden">
+            <!-- Subtle Background Elements for CTA -->
+            <div class="absolute top-[15%] left-[8%] w-14 h-14 border-2 border-white/5 rounded-full pointer-events-none"
+                style="animation: bounce-gentle 6s ease-in-out infinite;"></div>
+            <div class="absolute bottom-[20%] right-[10%] w-12 h-12 border border-white/5 rotate-45 pointer-events-none"
+                style="animation: float-slow 13s ease-in-out infinite;"></div>
+            <div class="absolute top-[50%] right-[15%] w-2 h-2 bg-white/10 rounded-full pointer-events-none hidden lg:block"
+                style="animation: float-diagonal 7s ease-in-out infinite; animation-delay: 0.6s;"></div>
+
+            <div
+                class="max-w-7xl mx-auto p-8 sm:p-12 lg:p-20 rounded-2xl sm:rounded-[2rem] bg-gradient-to-br from-primary to-[#D99A01] relative overflow-hidden flex flex-col items-center text-center space-y-6 sm:space-y-8">
+                <!-- Abstract car silhouette -->
+                <div class="absolute inset-0 opacity-10 pointer-events-none flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[200px] sm:text-[400px]">directions_car</span>
+                </div>
+                <h2
+                    class="text-3xl sm:text-4xl lg:text-6xl font-black text-navy-deep leading-tight max-w-3xl relative z-10">
+                    Ready to turn that car into cash?</h2>
+                <p class="text-navy-deep/70 text-base sm:text-lg font-medium max-w-lg relative z-10">Join 10,000+ happy
+                    customers who got paid top dollar for their vehicles.</p>
+                <a href="tel:0415050001" id="cta-btn-footer"
+                    class="px-8 sm:px-12 py-3 sm:py-5 bg-navy-deep text-white hover:bg-navy-deep/90 font-bold text-base sm:text-xl rounded-xl sm:rounded-2xl transition-all shadow-2xl flex items-center gap-3 sm:gap-4 relative z-10">
+                    Get an instant offer
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy-deep border-t border-white/5 py-12 sm:py-20 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-12">
+            <div class="space-y-4 sm:space-y-6">
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <div class="size-7 sm:size-8 bg-primary flex items-center justify-center rounded-lg">
+                        <span class="text-navy-deep font-bold text-lg sm:text-xl">$</span>
+                    </div>
+                    <span class="text-base sm:text-lg font-bold tracking-tight text-white">CAR BUYERS <span
+                            class="text-primary">MELBOURNE</span></span>
+                </div>
+                <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">Melbourne's trusted car buyers. We pay top
+                    cash for all vehicles.</p>
+            </div>
+            <div class="space-y-4 sm:space-y-6">
+                <h6 class="text-xs font-black text-slate-400 uppercase tracking-[0.2em]">Services</h6>
+                <div class="flex flex-col gap-2 text-sm">
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#services">Cash for Cars</a>
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#services">Car Removal</a>
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#services">Scrap Car Buyers</a>
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#services">Car Wreckers</a>
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#services">Cash for Vans &
+                        Utes</a>
+                </div>
+            </div>
+            <div class="space-y-4 sm:space-y-6">
+                <h6 class="text-xs font-black text-slate-400 uppercase tracking-[0.2em]">Contact Us</h6>
+                <div class="space-y-3 sm:space-y-4">
+                    <div class="flex items-center gap-3 text-slate-200 text-sm sm:text-base">
+                        <span class="material-symbols-outlined text-primary text-lg">phone</span>
+                        <a href="tel:0415050001" class="font-medium hover:text-primary transition-colors">0415 050
+                            001</a>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-200 text-sm sm:text-base">
+                        <span class="material-symbols-outlined text-primary text-lg">chat</span>
+                        <a href="https://wa.me/61415050001"
+                            class="font-medium hover:text-primary transition-colors">WhatsApp</a>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-200 text-sm">
+                        <span class="material-symbols-outlined text-primary text-lg">email</span>
+                        <a href="/cdn-cgi/l/email-protection#fd94939b92bd9e9c8f9f8884988f8e9098919f92888f9398d39e9290d39c88"
+                            class="font-medium hover:text-primary transition-colors text-xs"><span class="__cf_email__"
+                                data-cfemail="422b2c242d0221233020373b2730312f272e202d37302c276c212d2f6c2337">[email&#160;protected]</span></a>
+                    </div>
+                    <div class="flex items-center gap-3 text-slate-200 text-sm sm:text-base">
+                        <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+                        <span class="font-medium">Melbourne, Victoria</span>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-4 sm:space-y-6">
+                <h6 class="text-xs font-black text-slate-400 uppercase tracking-[0.2em]">Quick Links</h6>
+                <div class="flex flex-col gap-2 text-sm">
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#why-us">Why Choose Us</a>
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#about">About Us</a>
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#contact">Contact</a>
+                    <a class="text-slate-500 hover:text-white transition-colors" href="#reviews">Reviews</a>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto mt-12 sm:mt-20 pt-6 sm:pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+            <p class="text-xs text-slate-600 text-center md:text-left">© 2026 Car Buyers Melbourne. All rights reserved.
+            </p>
+            <p class="text-xs text-slate-600 text-center md:text-right">Built for Melbourne's automotive community.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Form submission handler
+        const valuationForm = document.getElementById('valuation-form');
+        valuationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Collect form data
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                make: document.getElementById('make').value,
+                model: document.getElementById('model').value,
+                year: document.getElementById('year').value,
+                condition: document.getElementById('condition').value,
+                details: document.getElementById('details').value
+            };
+
+            // Show success message (in production, this would send to a server)
+            alert(`Thanks ${formData.name}! We've received your ${formData.year || ''} ${formData.make} ${formData.model} details. We'll contact you shortly at ${formData.phone}!`);
+
+            // Reset form
+            valuationForm.reset();
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Add smooth scroll behavior to all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
